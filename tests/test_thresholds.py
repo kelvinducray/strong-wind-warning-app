@@ -41,38 +41,38 @@ def test_get_kph_not_numeric(input: Any) -> None:
     "input, expected",
     [
         # North
-        (355, "N"),
-        (0, "N"),
-        (360, "N"),
-        (16.7, "N"),
+        (355, "Notherly"),
+        (0, "Notherly"),
+        (360, "Notherly"),
+        (16.7, "Notherly"),
         # East
-        (82, "E"),
-        (90, "E"),
-        (91.34, "E"),
+        (82, "Easterly"),
+        (90, "Easterly"),
+        (91.34, "Easterly"),
         # South
-        (170, "S"),
-        (180, "S"),
-        (190.01, "S"),
+        (170, "Southerly"),
+        (180, "Southerly"),
+        (190.01, "Southerly"),
         # West
-        (263, "W"),
-        (270, "W"),
-        (281.04, "W"),
+        (263, "Westerly"),
+        (270, "Westerly"),
+        (281.04, "Westerly"),
         # NE
-        (30.02, "NE"),
-        (45, "NE"),
-        (51, "NE"),
+        (30.02, "North Easterly"),
+        (45, "North Easterly"),
+        (51, "North Easterly"),
         # SE
-        (130.01, "SE"),
-        (135, "SE"),
-        (141.93, "SE"),
+        (130.01, "South Easterly"),
+        (135, "South Easterly"),
+        (141.93, "South Easterly"),
         # SW
-        (209.443, "SW"),
-        (225, "SW"),
-        (231, "SW"),
+        (209.443, "South Westerly"),
+        (225, "South Westerly"),
+        (231, "South Westerly"),
         # NW
-        (300, "NW"),
-        (315, "NW"),
-        (322.6, "NW"),
+        (300, "North Westerly"),
+        (315, "North Westerly"),
+        (322.6, "North Westerly"),
     ],
 )
 def test_get_direction_name(input: Number, expected: Number) -> None:
@@ -84,21 +84,21 @@ def test_get_direction_name(input: Number, expected: Number) -> None:
     "input, expected",
     [
         # North/NE Boundary
-        (22.5, "N"),
+        (22.5, "Notherly"),
         # East/NE Boundary
-        (67.5, "E"),
+        (67.5, "Easterly"),
         # East/SE Boundary
-        (112.5, "E"),
+        (112.5, "Easterly"),
         # South/SE Boundary
-        (157.5, "S"),
+        (157.5, "Southerly"),
         # South/SW Boundary
-        (202.5, "S"),
+        (202.5, "Southerly"),
         # West/SW Boundary
-        (247.5, "W"),
+        (247.5, "Westerly"),
         # West/NW Boundary
-        (292.5, "W"),
+        (292.5, "Westerly"),
         # North/NW Boundary
-        (337.5, "N"),
+        (337.5, "Notherly"),
     ],
 )
 def test_get_direction_name_on_boundaries(
