@@ -2,10 +2,9 @@ from numbers import Number
 from typing import Any
 
 import pytest
+
 from strong_wind_warning_app.thresholds import (  # , get_wind_status
-    _get_direction_name,
-    _get_kmph,
-)
+    _get_direction_name, _get_kmph)
 
 
 # Tests for _get_kph()

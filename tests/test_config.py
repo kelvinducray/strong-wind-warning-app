@@ -1,6 +1,7 @@
 from typing import Any
 
 import pytest
+
 from strong_wind_warning_app.config import get_settings
 
 

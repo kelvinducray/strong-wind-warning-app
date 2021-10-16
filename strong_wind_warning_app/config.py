@@ -8,7 +8,7 @@ from pydantic import BaseSettings
 class DevelopmentSettings(BaseSettings):
     ENVIRONMENT_NAME: str = "Development"
 
-    OPEN_WEATHER_API_KEY: str  # Secret imported from env. variable
+    OPEN_WEATHER_API_KEY: str = ""  # Secret imported from env. variable
     OPEN_WEATHER_URL_BASE: str = "https://api.openweathermap.org/data/2.5/onecall"
     OPEN_WEATHER_API_TYPES: list[str] = [
         "current",
@@ -18,8 +18,8 @@ class DevelopmentSettings(BaseSettings):
         "alerts",
     ]
 
-    LOCATION_LATITUDE: str  # Secret imported from env. variable
-    LOCATION_LONGITUDE: str  # Secret imported from env. variable
+    LOCATION_LATITUDE: float = 0.0  # Secret imported from env. variable
+    LOCATION_LONGITUDE: float = 0.0  # Secret imported from env. variable
 
     class Config:
         env_file = ".env"
