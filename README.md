@@ -1,5 +1,7 @@
 # Strong Wind Warning App
 
+[![codecov](https://codecov.io/gh/kelvinducray/strong-wind-warning-app/branch/main/graph/badge.svg?token=FYZHCZXGKT)](https://codecov.io/gh/kelvinducray/strong-wind-warning-app)
+
 ...
 
 ## To-do:
